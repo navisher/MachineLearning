@@ -13,7 +13,7 @@ training_data = datasets.FashionMNIST(
     train=True,
     download=True,
     transform=ToTensor(),
-    target_transform=Lambda(lambda y: torch.zeros(10, dtype=torch.float).scatter_(0, torch.tensor(y), value=1))
+    #target_transform=Lambda(lambda y: torch.zeros(10, dtype=torch.float).scatter_(0, torch.tensor(y), value=1))
 )
 
 test_data = datasets.FashionMNIST(
@@ -49,8 +49,8 @@ for i in range(1, cols * rows + 1):
 
 plt.show()
 
-train_dataloader = DataLoader(training_data, batch_size=64, shuffle=True)
-test_dataloader = DataLoader(test_data, batch_size=64, shuffle=True)
+train_dataloader = DataLoader(training_data, batch_size=64)
+test_dataloader = DataLoader(test_data, batch_size=64)
 
 train_features, train_labels = next(iter(train_dataloader))
 print(f'Feature batch shape: {train_features.size()}')
