@@ -1,7 +1,8 @@
 import torch
+import math
 
 
-a = torch.tensor([1, 2, 3])
+a = torch.tensor([10, 1, 0.5])
 b = torch.tensor([2, 3, 4])
-c = a * b
-print(c)
+print(a.sum())
+print(torch.cuda.is_available())
