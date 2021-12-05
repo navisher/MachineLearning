@@ -1,8 +1,8 @@
 import torch
-import math
+import numpy as np
+
+x = torch.ones(5, requires_grad=True)
+print(x)
 
 
-a = torch.tensor([10, 1, 0.5])
-b = torch.tensor([2, 3, 4])
-print(a.sum())
-print(torch.cuda.is_available())
+

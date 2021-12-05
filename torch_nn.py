@@ -78,7 +78,7 @@ def accuracy(output, yb):
     return (index == yb).float().mean()
 
 
-from IPython.core.debugger import set_trace
+#from IPython.core.debugger import set_trace
 lr = 0.5
 epochs = 2
 
